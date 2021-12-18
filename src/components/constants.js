@@ -40,4 +40,6 @@ const monthsGen = [
   'Декабря',
 ];
 
-export { weekDays, weekDaysShort, months, monthsGen };
+const DAYS_IN_WEEK = 7;
+
+export { weekDays, weekDaysShort, months, monthsGen, DAYS_IN_WEEK };

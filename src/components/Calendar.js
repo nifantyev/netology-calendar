@@ -1,7 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Week from './Week';
-import { weekDays, weekDaysShort, months, monthsGen } from './constants';
+import {
+  weekDays,
+  weekDaysShort,
+  months,
+  monthsGen,
+  DAYS_IN_WEEK,
+} from './constants';
 
 const propTypes = {
   date: PropTypes.instanceOf(Date),
@@ -14,8 +20,6 @@ const getRussianWeekDay = (date) => {
 const addDays = (date, days) => {
   return new Date(date.getFullYear(), date.getMonth(), date.getDate() + days);
 };
-
-const DAYS_IN_WEEK = 7;
 
 const Calendar = ({ date }) => {
   // у нас неделя начинается с понедельника, а не с воскресенья
